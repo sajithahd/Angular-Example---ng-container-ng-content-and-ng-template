@@ -1,6 +1,9 @@
 <hello name="{{ name }}">
   Content projecting
 </hello>
-<p>
+<button (click)="toggleItems()">Display items</button>
+
+
+<p *ngIf="displayItems" >
   Start editing to see some magic happen :)
 </p>

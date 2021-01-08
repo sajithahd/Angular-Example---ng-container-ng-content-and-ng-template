@@ -20,4 +20,8 @@ export class AppComponent {
       { name: "hera" }
     ];
   }
+
+  toggleItems(): void {
+    this.displayItems != this.displayItems;
+  }
 }
