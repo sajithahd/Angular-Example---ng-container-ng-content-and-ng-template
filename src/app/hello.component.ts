@@ -20,6 +20,7 @@ import { Component, Input } from "@angular/core";
       .content-1 {
         background: red;
         padding: 20px;
+        margin-bottom: 5px;
       }
 
       .content-2 {
