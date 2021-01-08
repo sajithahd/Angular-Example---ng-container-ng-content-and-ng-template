@@ -9,11 +9,20 @@
 
 <br/><br/><br/><br/>
 
-<div *ngIf="!displayItems else elsecontent">
+<ng-container *ngIf="!displayItems else elsecontent">
 	<div *ngFor="let item of items">
 		{{item.name}}
 	</div>
-</div>
+</ng-container>
+
+
+<br/><br/><br/><br/>
+
+<ng-container *ngFor="let item of items">
+	<div *ngIf="!displayItems else elsecontent">
+		{{item.name}}
+	</div>
+</ng-container>
 
 <ng-template #elsecontent>
 	<div>Click button to display names</div>
