@@ -1,4 +1,4 @@
-import { Component, VERSION } from "@angular/core";
+import { ChangeDetectorRef, Component, VERSION } from "@angular/core";
 
 @Component({
   selector: "my-app",
@@ -12,7 +12,7 @@ export class AppComponent {
   displayItems: boolean;
 
   constructor() {
-    this.displayItems = false;
+    this.displayItems = true;
     this.items = [
       { name: "sajitha" },
       { name: "hem" },
@@ -22,6 +22,6 @@ export class AppComponent {
   }
 
   toggleItems(): void {
-    this.displayItems != this.displayItems;
+    this.displayItems = !this.displayItems;
   }
 }
