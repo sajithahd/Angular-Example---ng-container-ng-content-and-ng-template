@@ -1,9 +1,20 @@
 <hello name="{{ name }}">
 	Content projecting
 </hello>
-<button (click)="toggleItems()">{{displayItems?'Display Items':'Hide Items'}}</button>
+
+<br/><br/><br/><br/>
 
 
-<div *ngIf="!displayItems">
-	Start editing to see some magic happen :)
+
+
+<div *ngIf="!displayItems else elsecontent">
+	<div *ngFor="let item of items">
+		{{item.name}}
+	</div>	
 </div>
+
+<ng-template #elsecontent>
+  <div>Click button to display names</div>
+</ng-template>
+
+<button (click)="toggleItems()">{{displayItems?'Display Names':'Hide Names'}}</button>
