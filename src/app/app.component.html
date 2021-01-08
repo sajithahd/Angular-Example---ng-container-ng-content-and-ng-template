@@ -1,20 +1,22 @@
 <hello name="{{ name }}">
-	Content projecting
+	<div class="content-1">
+		Content for ng-content 1
+	</div>
+	<div class="content-2">
+		Content for ng-content 2
+	</div>
 </hello>
 
 <br/><br/><br/><br/>
 
-
-
-
 <div *ngIf="!displayItems else elsecontent">
 	<div *ngFor="let item of items">
 		{{item.name}}
-	</div>	
+	</div>
 </div>
 
 <ng-template #elsecontent>
-  <div>Click button to display names</div>
+	<div>Click button to display names</div>
 </ng-template>
 
 <button (click)="toggleItems()">{{displayItems?'Display Names':'Hide Names'}}</button>
